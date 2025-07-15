@@ -18,7 +18,7 @@ Taskify is a lightweight and secure todo app featuring local authentication, dar
 
 **Frontend**  
 - React.js  
-- Tailwind CSS  
+- CSS3
 
 **Backend**  
 - Node.js  
@@ -74,41 +74,3 @@ The frontend will run on `http://localhost:3000` by default.
 | `/api/todos`       | POST   | Create a new todo                     |
 | `/api/todos/:id`   | PUT    | Update a todo (title, completed)      |
 | `/api/todos/:id`   | DELETE | Delete a todo                         |
-
----
-
-## Todo States
-
-- **Pending**: Default state of newly created todos  
-- **Completed**: Marked as finished  
-- **Deleted**: Permanently removed  
-
----
-
-## Folder Structure (Optional)
-
-```
-taskify/
-├── client/           # React frontend
-│   └── ...
-├── server/           # Express backend
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/
-│   └── ...
-└── README.md
-```
-
----
-
-## Future Enhancements
-
-- Add due dates (without reminders)  
-- Implement tagging system (e.g., #work, #personal)  
-- Soft delete (trash bin with recovery option)  
-
----
-
-## License
-
-MIT License
