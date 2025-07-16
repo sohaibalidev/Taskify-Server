@@ -32,8 +32,34 @@ app.use('/api', RegisterRoute);
 app.use('/api', TodoRoute);
 
 app.get('/', (req, res) => {
-    res.status(200).send('[Taskify] Server Running Properly')
-})
+    const uptime = process.uptime().toFixed(1);
+    const timestamp = new Date().toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true,
+    });
+
+    const statusReport = [
+        '==========================================',
+        '  Wrikos API Service — Status Report',
+        '==========================================',
+        '',
+        `Status     : 200 OK`,
+        `Uptime     : ${uptime}s`,
+        `Timestamp  : ${timestamp}`,
+        `Message    : Server is running properly`,
+        '',
+        '=========================================='
+    ].join('\n');
+
+    res.set('Content-Type', 'text/plain; charset=utf-8')
+        .status(200)
+        .send(statusReport);
+});
 
 app.get('/api/health', (req, res) => {
     res.status(200).json({ status: 'OK' });
@@ -41,7 +67,7 @@ app.get('/api/health', (req, res) => {
 
 // ================ Error Handling ================
 app.use((req, res) => {
-    res.status(404).send('404 Not Found' );
+    res.status(404).send('404 Not Found');
 });
 
 // ================ Server Startup ================

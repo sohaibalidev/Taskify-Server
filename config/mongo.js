@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb');
 const config = require('../config/config')
 
 const MONGO_URI = config.MONGO_URI;
-const DB_NAME = 'Taskify';
+const DB_NAME = config.DB_NAME;
 
 let db = null;
 let client = null;

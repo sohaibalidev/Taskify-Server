@@ -1,7 +1,7 @@
 {
-  "name": "taskify-server",
+  "name": "Wrikos-server",
   "version": "1.0.0",
-  "description": "Express.js backend for Taskify – manages user authentication, todos, and sessions.",
+  "description": "Express.js backend for Wrikos - manages user authentication, todos, and sessions.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -12,11 +12,11 @@
     "express",
     "backend",
     "api",
-    "taskify",
+    "Wrikos",
     "todos",
     "auth"
   ],
-  "author": "Sohaib",
+  "author": "Muhammad Sohaib Ali",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.2",

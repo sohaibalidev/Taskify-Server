@@ -1,6 +1,6 @@
-# Taskify - Personal Todo Manager
+# Wrikos - Personal Todo Manager
 
-Taskify is a lightweight and secure todo app featuring local authentication, dark/light mode, and user-specific task management. Built with the MERN stack for simplicity and performance.
+Wrikos is a lightweight and secure todo app featuring local authentication, dark/light mode, and user-specific task management. Built with the MERN stack for simplicity and performance.
 
 ---
 
@@ -39,7 +39,7 @@ npm install
 Create a `.env` file in the `server` folder:
 
 ```
-MONGO_URI=mongodb://localhost:27017/taskify
+MONGO_URI=mongodb://localhost:27017/Wrikos
 JWT_SECRET=your_secure_secret_here
 PORT=5000
 ```
