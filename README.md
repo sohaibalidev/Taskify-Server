@@ -1,66 +1,52 @@
-# Wrikos - Personal Todo Manager
+# Wrikos Server
 
-Wrikos is a lightweight and secure todo app featuring local authentication, dark/light mode, and user-specific task management. Built with the MERN stack for simplicity and performance.
+This is the backend of **Wrikos**, a secure and lightweight personal todo manager. It provides RESTful APIs for user authentication and task management, built with Node.js, Express, and MongoDB.
 
 ---
 
 ## Features
 
-- Dark/Light mode toggle  
-- Local authentication (username and password)  
-- Add, edit, mark complete, and delete tasks  
-- Each user has their own private task list  
-- Minimal UI focused on usability  
+- JWT-based authentication
+- User registration and login
+- Protected routes for task management
+- CRUD operations for todos
+- Secure password hashing with bcrypt
+- CORS and cookie handling support
 
 ---
 
 ## Tech Stack
 
-**Frontend**  
-- React.js  
-- CSS3
-
-**Backend**  
-- Node.js  
-- Express.js  
-- MongoDB  
+- Node.js
+- Express.js
+- MongoDB (MongoDB Atlas or local)
+- JSON Web Token (JWT)
+- bcryptjs
 
 ---
 
-## Getting Started
+## Environment Variables
 
-### Backend Setup
-
-```bash
-cd server
-npm install
-```
-
-Create a `.env` file in the `server` folder:
+Create a `.env` file in the root of the server directory:
 
 ```
-MONGO_URI=mongodb://localhost:27017/Wrikos
-JWT_SECRET=your_secure_secret_here
-PORT=5000
-```
-
-Start the backend:
-
-```bash
-npm start
+MONGO_URI = mongodb://localhost:27017/Wrikos
+JWT_SECRET = your_secure_secret_here
+FRONT_END_URL =
+DB_NAME = 
+NODE_ENV = 
 ```
 
 ---
 
-### Frontend Setup
+## Running the Server
 
 ```bash
-cd client
 npm install
 npm start
 ```
 
-The frontend will run on `http://localhost:3000` by default.
+Server will run on `http://localhost:5000` (or the port you define in `.env`).
 
 ---
 
@@ -74,3 +60,6 @@ The frontend will run on `http://localhost:3000` by default.
 | `/api/todos`       | POST   | Create a new todo                     |
 | `/api/todos/:id`   | PUT    | Update a todo (title, completed)      |
 | `/api/todos/:id`   | DELETE | Delete a todo                         |
+| `/api/health`      | GET    | Health check for uptime monitoring    |
+
+---
