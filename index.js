@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
         hour12: true,
     });
 
-    const statusReport = [
+    const statusReport = [ 
         '==========================================',
         '  Wrikos API Service — Status Report',
         '==========================================',
