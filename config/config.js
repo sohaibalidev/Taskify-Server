@@ -4,5 +4,5 @@ module.exports = {
     MONGO_URI: process.env.MONGO_URI,
     JWT_SECRET: process.env.JWT_SECRET,
     NODE_ENV: process.env.NODE_ENV || 'development',
-    DB_NAME: process.env.DN_NAME
+    DB_NAME: process.env.DB_NAME
 }
